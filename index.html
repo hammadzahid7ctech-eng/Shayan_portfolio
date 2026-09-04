@@ -1,0 +1,2372 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shayan | Cybersecurity Specialist Portfolio</title>
+    <meta name="description" content="Cybersecurity-focused solutions, security awareness, and technical strategies designed to protect applications, systems, and digital environments by Shayan.">
+    
+    <meta property="og:title" content="Shayan | Cybersecurity Specialist">
+    <meta property="og:description" content="Securing Digital Systems Against Modern Threats. Technical strategies and security assessments.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Shayan - Cybersecurity Specialist",
+      "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80",
+      "telephone": "+92 323 2784451",
+    "email": "shayanscurity@it.com",
+      "url": "https://shayan.com",
+      "description": "Cybersecurity solutions, vulnerability assessments, application security, and network security strategies."
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is cybersecurity?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cybersecurity is the practice of protecting systems, networks, and programs from digital attacks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does a cybersecurity specialist do?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A cybersecurity specialist monitors, assesses, and secures systems against potential vulnerabilities and cyber threats."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-deep-black: #05070a;
+            --bg-dark-navy: #0a0e17;
+            --bg-card: rgba(15, 23, 42, 0.65);
+            --bg-card-hover: rgba(26, 38, 66, 0.75);
+            --border-color: rgba(56, 189, 248, 0.15);
+            --border-glow: rgba(56, 189, 248, 0.4);
+            
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --text-dim: #64748b;
+            
+            --accent-blue: #00f0ff;
+            --accent-cyan: #38bdf8;
+            --accent-green: #10b981;
+            --accent-purple: #8b5cf6;
+            
+            --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+            --font-mono: 'Fira Code', monospace;
+            
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Base Resets & Typography */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-deep-black);
+            color: var(--text-main);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Cyber Grid Background Effect */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: 
+                linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--text-main);
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Utility Components */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .section-padding {
+            padding: 6rem 0;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.35rem 1rem;
+            background: rgba(0, 240, 255, 0.08);
+            border: 1px solid rgba(0, 240, 255, 0.25);
+            border-radius: 50px;
+            color: var(--accent-blue);
+            font-family: var(--font-mono);
+            font-size: 0.825rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.25rem;
+        }
+
+        .badge-dot {
+            width: 6px;
+            height: 6px;
+            background-color: var(--accent-blue);
+            border-radius: 50%;
+            box-shadow: 0 0 8px var(--accent-blue);
+            animation: pulse 2s infinite;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3.5rem auto;
+        }
+
+        .section-header h2 {
+            font-size: 2.25rem;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        .glass-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glass-card:hover {
+            border-color: var(--border-glow);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px -10px rgba(0, 240, 255, 0.15);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 0.85rem 1.75rem;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 1px solid transparent;
+            font-family: var(--font-sans);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, rgba(0,240,255,0.2) 0%, rgba(56,189,248,0.2) 100%);
+            color: var(--accent-blue);
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-blue);
+            color: var(--bg-deep-black);
+            box-shadow: 0 0 25px rgba(0, 240, 255, 0.5);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.03);
+            color: var(--text-main);
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--text-main);
+        }
+
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(5, 7, 10, 0.85);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            transition: var(--transition);
+        }
+
+        .navbar-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+
+        .logo {
+            font-family: var(--font-mono);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-main);
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-symbol {
+            color: var(--accent-blue);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.75rem;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--accent-blue);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0.5rem;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            width: 24px;
+            height: 2px;
+            background-color: var(--text-main);
+            transition: var(--transition);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            padding-top: 130px;
+            padding-bottom: 5rem;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3.25rem;
+            margin-bottom: 1.25rem;
+            letter-spacing: -0.03em;
+            background: linear-gradient(180deg, #FFFFFF 0%, #94A3B8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            max-width: 580px;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        /* Dashboard Visual Visualizer */
+        .hero-visual {
+            position: relative;
+        }
+
+        .dashboard-container {
+            background: var(--bg-dark-navy);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        .dashboard-header {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .dashboard-dots {
+            display: flex;
+            gap: 6px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        .dot-red { background-color: #ef4444; }
+        .dot-yellow { background-color: #f59e0b; }
+        .dot-green { background-color: #10b981; }
+
+        .dashboard-title {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--text-dim);
+        }
+
+        .dashboard-body {
+            padding: 1.25rem;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .dash-card {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 1rem;
+        }
+
+        .dash-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.75rem;
+        }
+
+        .dash-card-title {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            font-family: var(--font-mono);
+        }
+
+        .dash-status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent-green);
+        }
+
+        .dash-metric {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+            font-family: var(--font-mono);
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 3.5rem;
+            align-items: center;
+        }
+
+        .about-image-wrapper {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .about-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(20%) contrast(110%);
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.25rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            padding: 1.25rem;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+        }
+
+        .feature-card h4 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent-cyan);
+            font-family: var(--font-mono);
+        }
+
+        .feature-card p {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-category h3 {
+            font-size: 1.1rem;
+            font-family: var(--font-mono);
+            color: var(--accent-blue);
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 0.5rem;
+        }
+
+        .skill-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .skill-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .skill-item::before {
+            content: '>';
+            color: var(--accent-green);
+            font-family: var(--font-mono);
+            font-weight: bold;
+        }
+
+        /* Services & Filter Section */
+        .filter-controls {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .filter-btn {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: var(--text-muted);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: rgba(0, 240, 255, 0.1);
+            border-color: var(--accent-blue);
+            color: var(--accent-blue);
+        }
+
+        .search-box-wrapper {
+            max-width: 400px;
+            margin: 0 auto 2.5rem auto;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 0.75rem 1.25rem;
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            color: var(--text-main);
+            font-family: var(--font-sans);
+            outline: none;
+        }
+
+        .search-input:focus {
+            border-color: var(--accent-blue);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .service-card p {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-btn {
+            background: none;
+            border: none;
+            color: var(--accent-cyan);
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0;
+        }
+
+        .service-btn:hover {
+            color: var(--accent-blue);
+            text-decoration: underline;
+        }
+
+        /* Interactive Tabs Section */
+        .tabs-header {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            margin-bottom: 2rem;
+            overflow-x: auto;
+            padding-bottom: 0.5rem;
+        }
+
+        .tab-btn {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            padding: 0.75rem 1.25rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+
+        .tab-btn:hover, .tab-btn.active {
+            color: var(--accent-blue);
+            border-bottom-color: var(--accent-blue);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .tab-box {
+            background: rgba(15, 23, 42, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 1.25rem;
+        }
+
+        .tab-box h4 {
+            color: var(--accent-cyan);
+            font-family: var(--font-mono);
+            font-size: 0.95rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .tab-box ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project-card .cat-tag {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--accent-purple);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .project-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .project-card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 1.25rem;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-tag {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 0.25rem 0.6rem;
+            border-radius: 4px;
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        /* Security Lab Section */
+        .lab-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .lab-box {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .lab-input {
+            width: 100%;
+            padding: 0.75rem;
+            background: rgba(5, 7, 10, 0.8);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            color: var(--text-main);
+            font-family: var(--font-mono);
+            outline: none;
+        }
+
+        .strength-bar {
+            height: 6px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+            overflow: hidden;
+            margin-top: 0.5rem;
+        }
+
+        .strength-fill {
+            height: 100%;
+            width: 0%;
+            transition: var(--transition);
+        }
+
+        .checklist-items {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            cursor: pointer;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .checklist-item input {
+            cursor: pointer;
+            accent-color: var(--accent-blue);
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Knowledge Grid */
+        .knowledge-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .knowledge-card {
+            background: rgba(15, 23, 42, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 1.25rem;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .knowledge-card:hover {
+            border-color: var(--accent-blue);
+            background: rgba(0, 240, 255, 0.05);
+        }
+
+        .knowledge-card h4 {
+            font-family: var(--font-mono);
+            font-size: 0.95rem;
+        }
+
+        /* Process Timeline */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            background: var(--border-color);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            margin-bottom: 2.5rem;
+            position: relative;
+            width: 50%;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            padding-right: 2.5rem;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            padding-left: 2.5rem;
+            text-align: left;
+        }
+
+        .timeline-number {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: var(--accent-blue);
+            font-weight: 700;
+        }
+
+        /* Why Work With Shayan Grid */
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .why-card {
+            padding: 1.5rem;
+        }
+
+        .why-card h4 {
+            color: var(--accent-cyan);
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .why-card p {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        /* Tech Stack Grid */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 1rem;
+        }
+
+        .tech-item {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 1rem;
+            border-radius: 6px;
+            text-align: center;
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            transition: var(--transition);
+        }
+
+        .tech-item:hover {
+            border-color: var(--accent-blue);
+            color: var(--accent-blue);
+        }
+
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            height: 200px;
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(5,7,10,0.9), transparent);
+            display: flex;
+            align-items: flex-end;
+            padding: 1rem;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay span {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: var(--text-main);
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-group label {
+            font-size: 0.85rem;
+            font-family: var(--font-mono);
+            color: var(--text-muted);
+        }
+
+        .form-control {
+            padding: 0.85rem;
+            background: rgba(5, 7, 10, 0.8);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            color: var(--text-main);
+            font-family: var(--font-sans);
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            border-color: var(--accent-blue);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .contact-info-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-image {
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            height: 220px;
+        }
+
+        .contact-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .info-details {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            font-size: 0.95rem;
+        }
+
+        .info-item {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .info-label {
+            font-family: var(--font-mono);
+            color: var(--accent-cyan);
+            min-width: 90px;
+        }
+
+        /* FAQ Accordion */
+        .faq-accordion {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .faq-item {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background: var(--bg-card);
+            overflow: hidden;
+        }
+
+        .faq-header {
+            width: 100%;
+            padding: 1.25rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: none;
+            border: none;
+            color: var(--text-main);
+            font-size: 1rem;
+            font-weight: 600;
+            text-align: left;
+            cursor: pointer;
+        }
+
+        .faq-icon {
+            font-family: var(--font-mono);
+            color: var(--accent-blue);
+            transition: var(--transition);
+        }
+
+        .faq-body {
+            padding: 0 1.25rem 1.25rem 1.25rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            display: none;
+        }
+
+        .faq-item.active .faq-body {
+            display: block;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        /* Final CTA */
+        .cta-box {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(180deg, rgba(15,23,42,0.8) 0%, rgba(5,7,10,0.9) 100%);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+        }
+
+        .cta-box h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-box p {
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        .footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 4rem 0 2rem 0;
+            background: var(--bg-dark-navy);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            font-family: var(--font-mono);
+            font-size: 0.95rem;
+            color: var(--text-main);
+            margin-bottom: 1.25rem;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-blue);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-dim);
+        }
+
+        /* Modal Component */
+        .modal {
+            position: fixed;
+            inset: 0;
+            z-index: 2000;
+            background: rgba(5, 7, 10, 0.85);
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition);
+        }
+
+        .modal.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-content {
+            background: var(--bg-dark-navy);
+            border: 1px solid var(--border-glow);
+            border-radius: 12px;
+            padding: 2rem;
+            max-width: 600px;
+            width: 100%;
+            max-height: 85vh;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .modal-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent-blue);
+        }
+
+        .modal-body {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Lightbox Modal */
+        .lightbox-img {
+            max-width: 90vw;
+            max-height: 80vh;
+            border-radius: 8px;
+        }
+
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--bg-dark-navy);
+            border: 1px solid var(--accent-blue);
+            color: var(--text-main);
+            padding: 1rem 1.5rem;
+            border-radius: 6px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            z-index: 3000;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* Back to top */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            width: 40px;
+            height: 40px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--accent-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition);
+            z-index: 900;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* Responsive Styles / Breakpoints */
+        @media (max-width: 1200px) {
+            .container { max-width: 960px; }
+        }
+
+        @media (max-width: 992px) {
+            .container { max-width: 720px; }
+            .hero-grid, .about-grid, .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .timeline::before { left: 0; }
+            .timeline-item { width: 100%; padding-left: 2rem !important; text-align: left !important; }
+            .timeline-item:nth-child(odd) { padding-right: 0; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .container { max-width: 540px; }
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background: var(--bg-dark-navy);
+                border-bottom: 1px solid var(--border-color);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1.5rem;
+                transform: translateY(-150%);
+                transition: var(--transition);
+            }
+            .nav-links.active { transform: translateY(0); }
+            .hamburger { display: flex; }
+            .hero-content h1 { font-size: 2.25rem; }
+            .about-features { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 576px) {
+            .section-padding { padding: 4rem 0; }
+            .dashboard-body { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .btn { width: 100%; }
+            .hero-cta { flex-direction: column; }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 { font-size: 1.85rem; }
+            .cta-box h2 { font-size: 1.75rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="container navbar-container">
+            <a href="#home" class="logo">
+                <span class="logo-symbol">&gt;_</span>SHAYAN
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#lab" class="nav-link">Security Lab</a></li>
+                <li><a href="#process" class="nav-link">Process</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="#contact" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Let’s Talk Security</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle Navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="badge">
+                        <span class="badge-dot"></span>
+                        CYBERSECURITY SPECIALIST
+                    </div>
+                    <h1>Securing Digital Systems Against Modern Threats</h1>
+                    <p>Cybersecurity-focused solutions, security awareness and technical strategies designed to help protect applications, systems and digital environments.</p>
+                    <div class="hero-cta">
+                        <a href="#contact" class="btn btn-primary">Discuss a Security Project</a>
+                        <a href="#skills" class="btn btn-secondary">Explore My Skills</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="dashboard-container">
+                        <div class="dashboard-header">
+                            <div class="dashboard-dots">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <span class="dashboard-title">SEC_OPS_CENTER // ACTIVE</span>
+                        </div>
+                        <div class="dashboard-body">
+                            <div class="dash-card">
+                                <div class="dash-card-header">
+                                    <span class="dash-card-title">Threat Monitoring</span>
+                                    <span class="dash-status-dot"></span>
+                                </div>
+                                <div class="dash-metric">Active</div>
+                            </div>
+                            <div class="dash-card">
+                                <div class="dash-card-header">
+                                    <span class="dash-card-title">Security Assessment</span>
+                                    <span class="dash-status-dot"></span>
+                                </div>
+                                <div class="dash-metric">Standard</div>
+                            </div>
+                            <div class="dash-card">
+                                <div class="dash-card-header">
+                                    <span class="dash-card-title">Network Security</span>
+                                    <span class="dash-status-dot"></span>
+                                </div>
+                                <div class="dash-metric">Protected</div>
+                            </div>
+                            <div class="dash-card">
+                                <div class="dash-card-header">
+                                    <span class="dash-card-title">Application Security</span>
+                                    <span class="dash-status-dot"></span>
+                                </div>
+                                <div class="dash-metric">Audited</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80" alt="Cybersecurity Professional" loading="lazy">
+                </div>
+                <div>
+                    <div class="badge">PROFESSIONAL PROFILE</div>
+                    <h2 style="font-size: 2.25rem; margin-bottom: 1rem;">About Shayan</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 1rem;">As a dedicated Cybersecurity Specialist, I focus on analyzing, evaluating, and improving the security posture of digital infrastructure. My approach combines technical analysis with an adversarial mindset to identify system vulnerabilities before they can be exploited.</p>
+                    <p style="color: var(--text-muted);">I believe in practical, defense-in-depth strategies, practical risk awareness, and continuous learning to adapt to the constantly evolving landscape of technical threats.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature-card">
+                            <h4>Security Mindset</h4>
+                            <p>Proactive hazard evaluation and proactive structural analysis.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>Technical Analysis</h4>
+                            <p>Deep-dive system inspection and configuration reviews.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>Risk Awareness</h4>
+                            <p>Prioritizing operational impact over theoretical risk.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>Problem Solving</h4>
+                            <p>Designing modern solutions for technical challenges.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" id="skills" style="background: rgba(10, 14, 23, 0.5);">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge">TECHNICAL CAPABILITIES</div>
+                <h2>Cybersecurity Skills</h2>
+                <p>Structured categorization of technical focus areas and foundational competencies.</p>
+            </div>
+            <div class="skills-grid">
+                <div class="glass-card skill-category">
+                    <h3>Network Security</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">Network Security Fundamentals</li>
+                        <li class="skill-item">Firewall Concepts</li>
+                        <li class="skill-item">Network Monitoring</li>
+                        <li class="skill-item">Secure Network Architecture</li>
+                        <li class="skill-item">Traffic Analysis</li>
+                    </ul>
+                </div>
+                <div class="glass-card skill-category">
+                    <h3>Application Security</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">Web Application Security</li>
+                        <li class="skill-item">Authentication Security</li>
+                        <li class="skill-item">Authorization</li>
+                        <li class="skill-item">Secure Coding</li>
+                        <li class="skill-item">Vulnerability Assessment</li>
+                    </ul>
+                </div>
+                <div class="glass-card skill-category">
+                    <h3>Security Testing</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">Security Testing</li>
+                        <li class="skill-item">Vulnerability Analysis</li>
+                        <li class="skill-item">Penetration Testing Concepts</li>
+                        <li class="skill-item">Security Auditing</li>
+                        <li class="skill-item">Risk Assessment</li>
+                    </ul>
+                </div>
+                <div class="glass-card skill-category">
+                    <h3>System Security</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">Operating System Security</li>
+                        <li class="skill-item">Access Control</li>
+                        <li class="skill-item">Endpoint Security</li>
+                        <li class="skill-item">System Hardening</li>
+                        <li class="skill-item">Security Configuration</li>
+                    </ul>
+                </div>
+                <div class="glass-card skill-category">
+                    <h3>Web Security</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">OWASP Concepts</li>
+                        <li class="skill-item">XSS Awareness</li>
+                        <li class="skill-item">SQL Injection Awareness</li>
+                        <li class="skill-item">CSRF Awareness</li>
+                        <li class="skill-item">Secure Authentication</li>
+                        <li class="skill-item">Session Security</li>
+                    </ul>
+                </div>
+                <div class="glass-card skill-category">
+                    <h3>Cloud Security</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">Cloud Security Fundamentals</li>
+                        <li class="skill-item">IAM Concepts</li>
+                        <li class="skill-item">Cloud Configuration Security</li>
+                        <li class="skill-item">Data Protection</li>
+                        <li class="skill-item">Access Management</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" id="services">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge">OFFERINGS</div>
+                <h2>Cybersecurity Services</h2>
+                <p>Specialized technical security services tailored to strengthen organizational resilience.</p>
+            </div>
+
+            <div class="search-box-wrapper">
+                <input type="text" id="service-search" class="search-input" placeholder="Search services (e.g. cloud, audit, testing)...">
+            </div>
+
+            <div class="filter-controls">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="Application Security">Application Security</button>
+                <button class="filter-btn" data-filter="Network Security">Network Security</button>
+                <button class="filter-btn" data-filter="System Security">System Security</button>
+                <button class="filter-btn" data-filter="Cloud Security">Cloud Security</button>
+                <button class="filter-btn" data-filter="Security Consulting">Security Consulting</button>
+            </div>
+
+            <div class="services-grid" id="services-grid">
+                </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background: rgba(10, 14, 23, 0.5);">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge">KNOWLEDGE MATRIX</div>
+                <h2>Security Expertise</h2>
+                <p>Explore concepts, risks, and recommended security controls by category.</p>
+            </div>
+
+            <div class="tabs-header">
+                <button class="tab-btn active" data-tab="tab-web">Web Security</button>
+                <button class="tab-btn" data-tab="tab-net">Network Security</button>
+                <button class="tab-btn" data-tab="tab-cloud">Cloud Security</button>
+                <button class="tab-btn" data-tab="tab-app">Application Security</button>
+                <button class="tab-btn" data-tab="tab-sys">System Security</button>
+            </div>
+
+            <div id="tab-web" class="tab-content active">
+                <div class="tab-box">
+                    <h4>Key Concepts</h4>
+                    <ul><li>OWASP Top 10</li><li>HTTP Headers</li><li>Same-Origin Policy</li></ul>
+                </div>
+                <div class="tab-box">
+                    <h4>Common Risks</h4>
+                    <ul><li>Cross-Site Scripting (XSS)</li><li>SQL Injection</li><li>Broken Auth</li></ul>
+                </div>
+                <div class="tab-box">
+                    <h4>Security Practices</h4>
+                    <ul><li>Input Validation</li><li>Output Encoding</li><li>Parameterized Queries</li></ul>
+                </div>
+                <div class="tab-box">
+                    <h4>Recommended Controls</h4>
+                    <ul><li>WAF Deployment</li><li>Content Security Policy (CSP)</li><li>Secure Cookies</li></ul>
+                </div>
+            </div>
+
+            <div id="tab-net" class="tab-content">
+                <div class="tab-box">
+                    <h4>Key Concepts</h4>
+                    <ul><li>Segmentation</li><li>Traffic Filtering</li><li>Encrypted Transit</li></ul>
+                </div>
+                <div class="tab-box">
+                    <h4>Common Risks</h4>
+                    <ul><li>Unencrypted Traffic</li><li>Rogue Access Points</li><li>Misconfigured Firewalls</li></ul>
+                </div>
+                <div class="tab-box">
+                    <h4>Security Practices</h4>
+                    <ul><li>Strict Firewall Rules</li><li>VPN / Zero Trust</li><li>Network Monitoring</li></ul>
+                </div>
+                <div class="tab-box">
+                    <h4>Recommended Controls</h4>
+                    <ul><li>IDS / IPS Systems</li><li>802.1X Auth</li><li>Segmented VLANs</li></ul>
+                </div>
+            </div>
+
+            <div id="tab-cloud" class="tab-content">
+                <div class="tab-box">
+                    <h4>Key Concepts</h4>
+                    <ul><li>Shared Responsibility</li><li>IAM Hierarchy</li><li>Cloud Architecture</li></ul>
+                </div>
+                <div class="tab-box">
+                    <h4>Common Risks</h4>
+                    <ul><li>Public Storage Buckets</li><li>Over-privileged Keys</li><li>Policy Drift</li></ul>
+                </div>
+                <div class="tab-box">
+                    <h4>Security Practices</h4>
+                    <ul><li>Least Privilege Access</li><li>Centralized Logging</li><li>MFA Infrastructure</li></ul>
+                </div>
+                <div class="tab-box">
+                    <h4>Recommended Controls</h4>
+                    <ul><li>Cloud Posture Management</li><li>Key Management Systems</li><li>Automated Audits</li></ul>
+                </div>
+            </div>
+
+            <div id="tab-app" class="tab-content">
+                <div class="tab-box">
+                    <h4>Key Concepts</h4>
+                    <ul><li>SDLC Integration</li><li>Threat Modeling</li><li>Dependency Management</li></ul>
+                </div>
+                <div class="tab-box">
+                    <h4>Common Risks</h4>
+                    <ul><li>Vulnerable Packages</li><li>Hardcoded Secrets</li><li>Logic Flaws</li></ul>
+                </div>
+                <div class="tab-box">
+                    <h4>Security Practices</h4>
+                    <ul><li>Code Reviews</li><li>Static Analysis (SAST)</li><li>Dynamic Testing (DAST)</li></ul>
+                </div>
+                <div class="tab-box">
+                    <h4>Recommended Controls</h4>
+                    <ul><li>Secrets Scanning</li><li>Dependency Scanning</li><li>CI/CD Controls</li></ul>
+                </div>
+            </div>
+
+            <div id="tab-sys" class="tab-content">
+                <div class="tab-box">
+                    <h4>Key Concepts</h4>
+                    <ul><li>OS Hardening</li><li>Access Controls</li><li>Patch Management</li></ul>
+                </div>
+                <div class="tab-box">
+                    <h4>Common Risks</h4>
+                    <ul><li>Unpatched Software</li><li>Unnecessary Services</li><li>Default Credentials</li></ul>
+                </div>
+                <div class="tab-box">
+                    <h4>Security Practices</h4>
+                    <ul><li>Regular Patching</li><li>Disabling Unused Ports</li><li>System Auditing</li></ul>
+                </div>
+                <div class="tab-box">
+                    <h4>Recommended Controls</h4>
+                    <ul><li>EDR Agents</li><li>Host Firewalls</li><li>Centralized Logging</li></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge">CONCEPTUAL WORK</div>
+                <h2>Security Projects & Labs</h2>
+                <p>Architectural concepts and research demonstrations illustrating key security methodologies.</p>
+            </div>
+            <div class="projects-grid" id="projects-grid">
+                </div>
+        </div>
+    </section>
+
+    <section class="section-padding" id="lab" style="background: rgba(10, 14, 23, 0.5);">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge">INTERACTIVE DEMOS</div>
+                <h2>Security Lab</h2>
+                <p>Educational utilities and interactive exercises designed for baseline awareness.</p>
+            </div>
+
+            <div class="lab-grid">
+                <div class="glass-card lab-box">
+                    <h3>Password Strength Analyzer</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-muted);">Client-side analysis only. No inputs are collected or sent online.</p>
+                    <input type="password" id="pass-input" class="lab-input" placeholder="Type sample password...">
+                    <div class="strength-bar">
+                        <div class="strength-fill" id="pass-fill"></div>
+                    </div>
+                    <span id="pass-text" style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-dim);">Awaiting input...</span>
+                </div>
+
+                <div class="glass-card lab-box">
+                    <h3>Phishing Awareness Exercise</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-muted);">Identify the suspicious indicator in this fictional notification:</p>
+                    <div style="background: rgba(0,0,0,0.5); padding: 0.75rem; border-radius: 6px; font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">
+                        From: security@update-your-bank-account-info.com<br>
+                        Subject: Action Required: Account Alert
+                    </div>
+                    <button class="btn btn-secondary" id="phish-btn" style="font-size: 0.85rem; padding: 0.5rem 1rem;">Analyze Sender Domain</button>
+                    <div id="phish-result" style="font-size: 0.85rem; color: var(--accent-cyan); display: none;">
+                        Suspicious domain detected: The address uses an illegitimate look-alike domain instead of an official entity URL.
+                    </div>
+                </div>
+
+                <div class="glass-card lab-box">
+                    <h3>Security Posture Checklist</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-muted);">Save local security state (persisted via localStorage):</p>
+                    <ul class="checklist-items" id="checklist">
+                        <li class="checklist-item"><input type="checkbox" id="c1"> <label for="c1">Strong unique passwords used</label></li>
+                        <li class="checklist-item"><input type="checkbox" id="c2"> <label for="c2">MFA enabled on critical services</label></li>
+                        <li class="checklist-item"><input type="checkbox" id="c3"> <label for="c3">System software updated</label></li>
+                        <li class="checklist-item"><input type="checkbox" id="c4"> <label for="c4">Encrypted backups configured</label></li>
+                        <li class="checklist-item"><input type="checkbox" id="c5"> <label for="c5">Access permissions reviewed</label></li>
+                        <li class="checklist-item"><input type="checkbox" id="c6"> <label for="c6">Suspicious links avoided</label></li>
+                        <li class="checklist-item"><input type="checkbox" id="c7"> <label for="c7">Security monitoring enabled</label></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge">REFERENCE</div>
+                <h2>Cybersecurity Knowledge Base</h2>
+                <p>Click on any concept card to reveal a succinct summary of key industry paradigms.</p>
+            </div>
+            <div class="knowledge-grid" id="knowledge-grid">
+                </div>
+        </div>
+    </section>
+
+    <section class="section-padding" id="process" style="background: rgba(10, 14, 23, 0.5);">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge">METHODOLOGY</div>
+                <h2>My Security Approach</h2>
+                <p>A systematic 6-step lifecycle for addressing security challenges.</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-number">01 — Understand</span>
+                    <h3 style="font-size: 1.1rem; margin: 0.25rem 0;">System Scope</h3>
+                    <p style="font-size: 0.875rem; color: var(--text-muted);">Understand the architecture, technologies, and functional requirements of the target system.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-number">02 — Identify</span>
+                    <h3 style="font-size: 1.1rem; margin: 0.25rem 0;">Asset Profiling</h3>
+                    <p style="font-size: 0.875rem; color: var(--text-muted);">Identify high-value assets, critical risks, and potential attack vectors.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-number">03 — Assess</span>
+                    <h3 style="font-size: 1.1rem; margin: 0.25rem 0;">Vulnerability Analysis</h3>
+                    <p style="font-size: 0.875rem; color: var(--text-muted);">Evaluate potential flaws in existing security controls and environment setups.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-number">04 — Prioritize</span>
+                    <h3 style="font-size: 1.1rem; margin: 0.25rem 0;">Risk Mapping</h3>
+                    <p style="font-size: 0.875rem; color: var(--text-muted);">Rank findings based on severity, ease of exploitability, and organizational impact.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-number">05 — Improve</span>
+                    <h3 style="font-size: 1.1rem; margin: 0.25rem 0;">Remediation</h3>
+                    <p style="font-size: 0.875rem; color: var(--text-muted);">Recommend practical security hardening measures and architectural improvements.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-number">06 — Monitor</span>
+                    <h3 style="font-size: 1.1rem; margin: 0.25rem 0;">Continuous Oversight</h3>
+                    <p style="font-size: 0.875rem; color: var(--text-muted);">Encourage continuous security monitoring and proactive awareness practices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge">VALUE PROPOSITION</div>
+                <h2>Why Work With Shayan</h2>
+                <p>Core principles guiding my security consulting and technical execution.</p>
+            </div>
+            <div class="why-grid">
+                <div class="glass-card why-card">
+                    <h4>Security-Focused Thinking</h4>
+                    <p>Building solutions with an inherent awareness of potential security threats.</p>
+                </div>
+                <div class="glass-card why-card">
+                    <h4>Technical Problem Solving</h4>
+                    <p>Methodical approach to complex vulnerabilities and architectural flaws.</p>
+                </div>
+                <div class="glass-card why-card">
+                    <h4>Risk Awareness</h4>
+                    <p>Focusing on practical risk management over theoretical compliance checks.</p>
+                </div>
+                <div class="glass-card why-card">
+                    <h4>Clear Communication</h4>
+                    <p>Translating complex technical security findings into actionable guidance.</p>
+                </div>
+                <div class="glass-card why-card">
+                    <h4>Continuous Learning</h4>
+                    <p>Staying current with the evolving threat landscape and modern security tools.</p>
+                </div>
+                <div class="glass-card why-card">
+                    <h4>Practical Security Approach</h4>
+                    <p>Balancing technical rigor with realistic operational feasibility.</p>
+                </div>
+                <div class="glass-card why-card">
+                    <h4>Privacy-Conscious Development</h4>
+                    <p>Prioritizing data protection and user privacy principles from design to execution.</p>
+                </div>
+                <div class="glass-card why-card">
+                    <h4>Structured Analysis</h4>
+                    <p>Employing standardized methodologies for complete security evaluations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background: rgba(10, 14, 23, 0.5);">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge">TOOLKIT</div>
+                <h2>Security Tools & Technologies</h2>
+                <p>Familiar technology tools used during security assessments and system analysis.</p>
+            </div>
+            <div class="tech-grid">
+                <div class="tech-item">Linux</div>
+                <div class="tech-item">Windows</div>
+                <div class="tech-item">Wireshark</div>
+                <div class="tech-item">Nmap</div>
+                <div class="tech-item">Burp Suite</div>
+                <div class="tech-item">OWASP</div>
+                <div class="tech-item">Git</div>
+                <div class="tech-item">Docker</div>
+                <div class="tech-item">Python</div>
+                <div class="tech-item">Bash</div>
+                <div class="tech-item">PowerShell</div>
+                <div class="tech-item">SQL</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge">VISUAL OVERVIEW</div>
+                <h2>Cybersecurity Gallery</h2>
+                <p>Selected visual perspectives across security domains.</p>
+            </div>
+            <div class="gallery-grid" id="gallery-grid">
+                </div>
+        </div>
+    </section>
+
+    <section class="section-padding" id="contact" style="background: rgba(10, 14, 23, 0.5);">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge">GET IN TOUCH</div>
+                <h2>Have a Security Concern?</h2>
+                <p>Let’s discuss your cybersecurity requirements, security assessment needs or technology project.</p>
+            </div>
+
+            <div class="contact-grid">
+                <form class="glass-card contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="text" id="phone" class="form-control" placeholder="0323 2784451">
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Needed</label>
+                        <select id="service" class="form-control">
+                            <option value="Security Assessment">Security Assessment</option>
+                            <option value="Vulnerability Assessment">Vulnerability Assessment</option>
+                            <option value="Web Application Security">Web Application Security</option>
+                            <option value="Network Security">Network Security</option>
+                            <option value="Security Consulting">Security Consulting</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="project-type">Project Type</label>
+                        <input type="text" id="project-type" class="form-control" placeholder="Application / Infrastructure / Web">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" class="form-control" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Security Request</button>
+                </form>
+
+                <div class="contact-info-wrapper">
+                    <div class="contact-image">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80" alt="Cybersecurity Consultation" loading="lazy">
+                    </div>
+                    <div class="glass-card info-details">
+                        <div class="info-item">
+                            <span class="info-label">Name:</span>
+                            <span>Shayan</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Profession:</span>
+                            <span>Cybersecurity Specialist</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Phone:</span>
+                            <a href="tel:+923232784451" style="color: var(--text-main);">0323 2784451</a>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">WhatsApp:</span>
+                            <a href="https://wa.me/923232784451" target="_blank" style="color: var(--accent-green);">+92 323 2784451</a>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Email:</span>
+                            <a href="mailto:shayanscurity@it.com" style="color: var(--accent-cyan);">shayanscurity@it.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge">INFORMATION</div>
+                <h2>Frequently Asked Questions</h2>
+                <p>Common questions regarding cybersecurity practices and service assessments.</p>
+            </div>
+            <div class="faq-accordion" id="faq-accordion">
+                </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="cta-box">
+                <h2>Build With Security In Mind.</h2>
+                <p>Whether you are developing a new application or reviewing an existing system, start with a security-focused approach.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="#contact" class="btn btn-primary">Contact Shayan</a>
+                    <a href="https://wa.me/923232784451" target="_blank" class="btn btn-secondary">WhatsApp Shayan</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="#home" class="logo" style="margin-bottom: 1rem;">
+                        <span class="logo-symbol">&gt;_</span>SHAYAN
+                    </a>
+                    <p style="color: var(--text-muted); font-size: 0.875rem; max-width: 300px;">
+                        Cybersecurity Specialist dedicated to security awareness, technical analysis, and defensive digital strategies.
+                    </p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#lab">Security Lab</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Security Assessment</a></li>
+                        <li><a href="#services">Application Security</a></li>
+                        <li><a href="#services">Network Security</a></li>
+                        <li><a href="#services">Vulnerability Assessment</a></li>
+                        <li><a href="#services">Security Consulting</a></li>
+                        <li><a href="#services">Cloud Security</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact Info</h4>
+                    <ul class="footer-links">
+                        <li><a href="tel:+923232784451">Phone: 0323 2784451</a></li>
+                        <li><a href="https://wa.me/923232784451" target="_blank" rel="noopener">WhatsApp: +92 323 2784451</a></li>
+                        <li><a href="mailto:shayanscurity@it.com">shayanscurity@it.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Shayan. All rights reserved. Professional Cybersecurity Portfolio.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" aria-label="Back to Top">&uarr;</button>
+
+    <div class="toast" id="toast"></div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <h3 class="modal-title" id="modal-title">Service Details</h3>
+            <div class="modal-body" id="modal-body">
+                Details body text goes here...
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Data Collections
+        const servicesData = [
+            { id: 1, title: 'Security Assessment', cat: 'Security Consulting', desc: 'Evaluate security posture and identify potential weaknesses in system configurations.' },
+            { id: 2, title: 'Vulnerability Assessment', cat: 'System Security', desc: 'Identify potential vulnerabilities and technical security risks across networks.' },
+            { id: 3, title: 'Web Application Security', cat: 'Application Security', desc: 'Review web applications for common security weaknesses and logic issues.' },
+            { id: 4, title: 'Network Security', cat: 'Network Security', desc: 'Security-focused network analysis and protection strategies.' },
+            { id: 5, title: 'Penetration Testing', cat: 'Security Consulting', desc: 'Authorized security testing to identify exploitable structural weaknesses.' },
+            { id: 6, title: 'Security Auditing', cat: 'Security Consulting', desc: 'Review configurations, access controls and security practices.' },
+            { id: 7, title: 'Risk Assessment', cat: 'Security Consulting', desc: 'Identify, analyze and prioritize technology-related organizational risks.' },
+            { id: 8, title: 'Security Hardening', cat: 'System Security', desc: 'Improve system configurations and reduce unnecessary attack surfaces.' },
+            { id: 9, title: 'Authentication & Access Security', cat: 'Application Security', desc: 'Improve login, authorization and access-control practices.' },
+            { id: 10, title: 'Security Awareness', cat: 'Security Consulting', desc: 'Create practical cybersecurity awareness resources for technical teams.' },
+            { id: 11, title: 'Incident Response Planning', cat: 'Security Consulting', desc: 'Help organizations prepare structured approaches for security incidents.' },
+            { id: 12, title: 'Cloud Security Review', cat: 'Cloud Security', desc: 'Review cloud configurations and access-management practices.' }
+        ];
+
+        const projectsData = [
+            {
+                title: 'Web Application Security Assessment',
+                cat: 'Application Security',
+                desc: 'A security assessment concept focused on identifying common web application weaknesses.',
+                tech: ['OWASP', 'HTTP Analysis', 'Auth Check']
+            },
+            {
+                title: 'Network Security Monitoring',
+                cat: 'Network Security',
+                desc: 'A monitoring dashboard concept for understanding network activity and security events.',
+                tech: ['Traffic Logs', 'SIEM Logic', 'Packet Analysis']
+            },
+            {
+                title: 'Secure Authentication System',
+                cat: 'Application Security',
+                desc: 'A security-focused authentication architecture demonstrating secure login and access-control principles.',
+                tech: ['MFA Design', 'OAuth2', 'Session Control']
+            },
+            {
+                title: 'Vulnerability Assessment Dashboard',
+                cat: 'System Security',
+                desc: 'A dashboard concept for organizing vulnerabilities by severity and priority.',
+                tech: ['Risk Scoring', 'Triage Workflow', 'Reporting']
+            },
+            {
+                title: 'Security Awareness Platform',
+                cat: 'Security Training',
+                desc: 'A cybersecurity awareness interface covering common security threats and safe digital practices.',
+                tech: ['Interactive Training', 'Phishing Awareness']
+            },
+            {
+                title: 'Cloud Security Review',
+                cat: 'Cloud Security',
+                desc: 'A conceptual cloud-security review workflow focused on access management and configuration.',
+                tech: ['IAM Security', 'Storage Auditing', 'Policy Analysis']
+            }
+        ];
+
+        const knowledgeData = [
+            { title: 'OWASP', desc: 'Open Web Application Security Project standards for software safety.' },
+            { title: 'Network Security', desc: 'Protections for communication integrity and data in transit.' },
+            { title: 'Zero Trust', desc: 'Never trust, always verify every access request regardless of origin.' },
+            { title: 'Identity & Access Management', desc: 'Ensuring correct users have appropriate permissions.' },
+            { title: 'Encryption', desc: 'Cryptographic protection for data at rest and in motion.' },
+            { title: 'Multi-Factor Authentication', desc: 'Layered verification beyond traditional password controls.' },
+            { title: 'Secure Coding', desc: 'Software engineering practices preventing security vulnerabilities.' },
+            { title: 'Incident Response', desc: 'Structured workflows for handling security events.' },
+            { title: 'Risk Management', desc: 'Identifying and mitigating technology operational risks.' },
+            { title: 'Security Awareness', desc: 'Training users to recognize potential cybersecurity hazards.' }
+        ];
+
+        const faqData = [
+            { q: 'What is cybersecurity?', a: 'Cybersecurity is the practice of protecting systems, networks, and programs from digital attacks.' },
+            { q: 'What does a cybersecurity specialist do?', a: 'A specialist monitors, evaluates, and secures digital systems against potential vulnerabilities.' },
+            { q: 'What is vulnerability assessment?', a: 'A process that identifies and ranks technical security flaws in an environment.' },
+            { q: 'What is penetration testing?', a: 'Authorized, controlled testing to evaluate system security resistance against realistic attacks.' },
+            { q: 'What is application security?', a: 'Measures taken to prevent vulnerabilities within application software code and logic.' },
+            { q: 'Why is MFA important?', a: 'It provides defense-in-depth by requiring multiple authentication factors, reducing exposure to stolen passwords.' },
+            { q: 'What is network security?', a: 'Policies and practices designed to prevent unauthorized access and network misuse.' },
+            { q: 'What is risk assessment?', a: 'The identification and prioritization of operational risks to balance security and usability.' },
+            { q: 'How can businesses improve security?', a: 'By establishing continuous patching, strict access control, employee awareness, and regular audits.' },
+            { q: 'How can I discuss a cybersecurity project?', a: 'You can submit the contact form above or reach out directly via Phone or WhatsApp.' }
+        ];
+
+        const galleryData = [
+            { title: 'Security Operations', cat: 'Security Operations', img: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=80' },
+            { title: 'Network Architecture', cat: 'Network Security', img: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=80' },
+            { title: 'Application Code Analysis', cat: 'Application Security', img: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80' },
+            { title: 'Cloud Infrastructure', cat: 'Cloud Security', img: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80' },
+            { title: 'Security Analysis Workspace', cat: 'Security Analysis', img: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80' },
+            { title: 'Modern Cybersecurity', cat: 'Cybersecurity', img: 'https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=600&q=80' }
+        ];
+
+        // Helper Functions (DOM Helpers avoiding unsafe innerHTML where required)
+        function sanitizeText(str) {
+            const temp = document.createElement('div');
+            temp.textContent = str;
+            return temp.innerHTML;
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 3000);
+        }
+
+        // Render Services
+        function renderServices(items) {
+            const grid = document.getElementById('services-grid');
+            grid.innerHTML = '';
+            items.forEach(s => {
+                const card = document.createElement('div');
+                card.className = 'glass-card service-card';
+                card.innerHTML = `
+                    <h3>${sanitizeText(s.title)}</h3>
+                    <p>${sanitizeText(s.desc)}</p>
+                    <button class="service-btn" data-id="${s.id}">View Details &rarr;</button>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Render Projects
+        function renderProjects() {
+            const grid = document.getElementById('projects-grid');
+            grid.innerHTML = '';
+            projectsData.forEach((p, idx) => {
+                const card = document.createElement('div');
+                card.className = 'glass-card project-card';
+                const techBadges = p.tech.map(t => `<span class="tech-tag">${sanitizeText(t)}</span>`).join('');
+                card.innerHTML = `
+                    <span class="cat-tag">${sanitizeText(p.cat)}</span>
+                    <h3>${sanitizeText(p.title)}</h3>
+                    <p>${sanitizeText(p.desc)}</p>
+                    <div class="tech-tags">${techBadges}</div>
+                    <button class="btn btn-secondary proj-btn" data-idx="${idx}" style="width:100%; font-size:0.85rem;">View Details</button>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Render Knowledge
+        function renderKnowledge() {
+            const grid = document.getElementById('knowledge-grid');
+            grid.innerHTML = '';
+            knowledgeData.forEach(k => {
+                const card = document.createElement('div');
+                card.className = 'knowledge-card';
+                card.innerHTML = `<h4>${sanitizeText(k.title)}</h4>`;
+                card.addEventListener('click', () => {
+                    openModal(k.title, k.desc);
+                });
+                grid.appendChild(card);
+            });
+        }
+
+        // Render FAQ
+        function renderFAQ() {
+            const container = document.getElementById('faq-accordion');
+            container.innerHTML = '';
+            faqData.forEach(item => {
+                const el = document.createElement('div');
+                el.className = 'faq-item';
+                el.innerHTML = `
+                    <button class="faq-header">
+                        <span>${sanitizeText(item.q)}</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-body">${sanitizeText(item.a)}</div>
+                `;
+                el.querySelector('.faq-header').addEventListener('click', () => {
+                    el.classList.toggle('active');
+                });
+                container.appendChild(el);
+            });
+        }
+
+        // Render Gallery
+        function renderGallery() {
+            const grid = document.getElementById('gallery-grid');
+            grid.innerHTML = '';
+            galleryData.forEach(g => {
+                const item = document.createElement('div');
+                item.className = 'gallery-item';
+                item.innerHTML = `
+                    <img src="${g.img}" alt="${sanitizeText(g.title)}" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>${sanitizeText(g.title)}</span>
+                    </div>
+                `;
+                item.addEventListener('click', () => {
+                    openLightbox(g.img, g.title);
+                });
+                grid.appendChild(item);
+            });
+        }
+
+        // Modal Handlers
+        const modal = document.getElementById('modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalBody = document.getElementById('modal-body');
+
+        function openModal(title, body) {
+            modalTitle.textContent = title;
+            modalBody.textContent = body;
+            modal.classList.add('active');
+        }
+
+        function openLightbox(imgUrl, title) {
+            modalTitle.textContent = title;
+            modalBody.innerHTML = `<img src="${imgUrl}" alt="${sanitizeText(title)}" class="lightbox-img">`;
+            modal.classList.add('active');
+        }
+
+        document.getElementById('modal-close').addEventListener('click', () => {
+            modal.classList.remove('active');
+        });
+
+        // Event Listeners Initialization
+        document.addEventListener('DOMContentLoaded', () => {
+            renderServices(servicesData);
+            renderProjects();
+            renderKnowledge();
+            renderFAQ();
+            renderGallery();
+
+            // Mobile Hamburger
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('nav-links');
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                });
+            });
+
+            // Service Filtering
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                    e.target.classList.add('active');
+                    const cat = e.target.getAttribute('data-filter');
+                    if (cat === 'all') {
+                        renderServices(servicesData);
+                    } else {
+                        const filtered = servicesData.filter(s => s.cat === cat);
+                        renderServices(filtered);
+                    }
+                });
+            });
+
+            // Service Search
+            document.getElementById('service-search').addEventListener('input', (e) => {
+                const term = e.target.value.toLowerCase();
+                const filtered = servicesData.filter(s => 
+                    s.title.toLowerCase().includes(term) || s.desc.toLowerCase().includes(term)
+                );
+                renderServices(filtered);
+            });
+
+            // Service Modal Delegation
+            document.getElementById('services-grid').addEventListener('click', (e) => {
+                if(e.target.classList.contains('service-btn')) {
+                    const id = parseInt(e.target.getAttribute('data-id'));
+                    const service = servicesData.find(s => s.id === id);
+                    if(service) {
+                        openModal(service.title, service.desc + " This service focus area encompasses assessment, reporting, and functional mitigation strategies.");
+                    }
+                }
+            });
+
+            // Project Modal Delegation
+            document.getElementById('projects-grid').addEventListener('click', (e) => {
+                if(e.target.classList.contains('proj-btn')) {
+                    const idx = parseInt(e.target.getAttribute('data-idx'));
+                    const proj = projectsData[idx];
+                    if(proj) {
+                        openModal(proj.title, `${proj.desc}\n\nKey Concepts Involved: ${proj.tech.join(', ')}. (Conceptual project architecture demo)`);
+                    }
+                }
+            });
+
+            // Tab Switching
+            document.querySelectorAll('.tab-btn').forEach(tab => {
+                tab.addEventListener('click', (e) => {
+                    document.querySelectorAll('.tab-btn').forEach(t => t.classList.remove('active'));
+                    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                    
+                    e.target.classList.add('active');
+                    const targetId = e.target.getAttribute('data-tab');
+                    document.getElementById(targetId).classList.add('active');
+                });
+            });
+
+            // Security Lab: Password Checker
+            const passInput = document.getElementById('pass-input');
+            const passFill = document.getElementById('pass-fill');
+            const passText = document.getElementById('pass-text');
+
+            passInput.addEventListener('input', (e) => {
+                const val = e.target.value;
+                if (!val) {
+                    passFill.style.width = '0%';
+                    passText.textContent = 'Awaiting input...';
+                    return;
+                }
+                let score = 0;
+                if (val.length >= 8) score += 25;
+                if (/[A-Z]/.test(val)) score += 25;
+                if (/[0-9]/.test(val)) score += 25;
+                if (/[^A-Za-z0-9]/.test(val)) score += 25;
+
+                passFill.style.width = score + '%';
+                if (score <= 25) {
+                    passFill.style.background = '#ef4444';
+                    passText.textContent = 'Weak - Add length, numbers and symbols.';
+                } else if (score <= 75) {
+                    passFill.style.background = '#f59e0b';
+                    passText.textContent = 'Moderate - Include dynamic characters.';
+                } else {
+                    passFill.style.background = '#10b981';
+                    passText.textContent = 'Strong security complexity pattern.';
+                }
+            });
+
+            // Security Lab: Phishing Check
+            document.getElementById('phish-btn').addEventListener('click', () => {
+                document.getElementById('phish-result').style.display = 'block';
+            });
+
+            // Security Lab: Checklist LocalStorage
+            const checkboxes = document.querySelectorAll('.checklist-item input');
+            checkboxes.forEach((cb, i) => {
+                const saved = localStorage.getItem('sec_check_' + i);
+                if (saved === 'true') cb.checked = true;
+                cb.addEventListener('change', () => {
+                    localStorage.setItem('sec_check_' + i, cb.checked);
+                });
+            });
+
+            // Contact Form
+            document.getElementById('contact-form').addEventListener('submit', (e) => {
+                e.preventDefault();
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const phone = document.getElementById('phone').value;
+                const service = document.getElementById('service').value;
+                const projType = document.getElementById('project-type').value;
+                const msg = document.getElementById('message').value;
+
+                const waMessage = `Hello Shayan,%0A%0AI would like to discuss a cybersecurity project.%0A%0AName: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0APhone: ${encodeURIComponent(phone)}%0AService: ${encodeURIComponent(service)}%0AProject Type: ${encodeURIComponent(projType)}%0AMessage: ${encodeURIComponent(msg)}%0A%0APlease contact me regarding this project.`;
+
+                showToast('Request Generated! Redirecting to WhatsApp...');
+
+                setTimeout(() => {
+                    window.open(`https://wa.me/923232784451?text=${waMessage}`, '_blank');
+                }, 1000);
+            });
+
+            // Back to Top & Navbar Scroll Effect
+            const backToTop = document.getElementById('back-to-top');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 400) {
+                    backToTop.classList.add('show');
+                } else {
+                    backToTop.classList.remove('show');
+                }
+            });
+
+            backToTop.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
